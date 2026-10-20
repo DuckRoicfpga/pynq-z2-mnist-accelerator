@@ -1,0 +1,1231 @@
+{
+  "status": "PASS",
+  "created_utc": "2025-05-03T16:56:58.050912+00:00",
+  "actual_board_test_performed": true,
+  "machine": "armv7l",
+  "pynq_version": "3.1.1",
+  "model_fingerprint": "0035b06c2c4fd36966645b9080907a4d3bee77e206b2ca49033ab94f1b658971",
+  "identity": {
+    "ip": "mnist.local:user:mlp_axi_lite:1.0",
+    "base": "0x40000000",
+    "id": "0x4d4c5031",
+    "image_size": 784,
+    "pl_clock_mhz_from_registers": 100.0
+  },
+  "reference_cases_passed": 120,
+  "soft_reset_passed": true,
+  "reference_results": [
+    {
+      "case": 0,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.100104,
+      "total_ms": 1.333003
+    },
+    {
+      "case": 1,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081453,
+      "total_ms": 1.311988
+    },
+    {
+      "case": 2,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079859,
+      "total_ms": 1.306751
+    },
+    {
+      "case": 3,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080935,
+      "total_ms": 1.307021
+    },
+    {
+      "case": 4,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080197,
+      "total_ms": 1.308806
+    },
+    {
+      "case": 5,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.082443,
+      "total_ms": 1.314382
+    },
+    {
+      "case": 6,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07984,
+      "total_ms": 1.306836
+    },
+    {
+      "case": 7,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07992,
+      "total_ms": 1.313791
+    },
+    {
+      "case": 8,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080302,
+      "total_ms": 1.314351
+    },
+    {
+      "case": 9,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080726,
+      "total_ms": 1.308744
+    },
+    {
+      "case": 10,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.08192,
+      "total_ms": 1.311932
+    },
+    {
+      "case": 11,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079834,
+      "total_ms": 1.311206
+    },
+    {
+      "case": 12,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080757,
+      "total_ms": 1.30427
+    },
+    {
+      "case": 13,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080302,
+      "total_ms": 1.313164
+    },
+    {
+      "case": 14,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080904,
+      "total_ms": 1.312603
+    },
+    {
+      "case": 15,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080264,
+      "total_ms": 1.30851
+    },
+    {
+      "case": 16,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080307,
+      "total_ms": 1.310584
+    },
+    {
+      "case": 17,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080689,
+      "total_ms": 1.314105
+    },
+    {
+      "case": 18,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079643,
+      "total_ms": 1.320437
+    },
+    {
+      "case": 19,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079692,
+      "total_ms": 1.30432
+    },
+    {
+      "case": 20,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079754,
+      "total_ms": 1.308831
+    },
+    {
+      "case": 21,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079674,
+      "total_ms": 1.317576
+    },
+    {
+      "case": 22,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080283,
+      "total_ms": 1.312419
+    },
+    {
+      "case": 23,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.083908,
+      "total_ms": 1.320923
+    },
+    {
+      "case": 24,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.08,
+      "total_ms": 1.311003
+    },
+    {
+      "case": 25,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079606,
+      "total_ms": 1.297625
+    },
+    {
+      "case": 26,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079618,
+      "total_ms": 1.307421
+    },
+    {
+      "case": 27,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078578,
+      "total_ms": 1.385784
+    },
+    {
+      "case": 28,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081372,
+      "total_ms": 1.313299
+    },
+    {
+      "case": 29,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079323,
+      "total_ms": 1.31515
+    },
+    {
+      "case": 30,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.0792,
+      "total_ms": 1.308511
+    },
+    {
+      "case": 31,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07883,
+      "total_ms": 1.311889
+    },
+    {
+      "case": 32,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079902,
+      "total_ms": 1.303403
+    },
+    {
+      "case": 33,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079446,
+      "total_ms": 1.302985
+    },
+    {
+      "case": 34,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079809,
+      "total_ms": 1.297157
+    },
+    {
+      "case": 35,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079126,
+      "total_ms": 1.314621
+    },
+    {
+      "case": 36,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.077865,
+      "total_ms": 1.308006
+    },
+    {
+      "case": 37,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079865,
+      "total_ms": 1.302499
+    },
+    {
+      "case": 38,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079821,
+      "total_ms": 1.30144
+    },
+    {
+      "case": 39,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079083,
+      "total_ms": 1.314597
+    },
+    {
+      "case": 40,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079575,
+      "total_ms": 1.302492
+    },
+    {
+      "case": 41,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078991,
+      "total_ms": 1.299397
+    },
+    {
+      "case": 42,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081157,
+      "total_ms": 1.300419
+    },
+    {
+      "case": 43,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078603,
+      "total_ms": 1.297661
+    },
+    {
+      "case": 44,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080006,
+      "total_ms": 1.297489
+    },
+    {
+      "case": 45,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079353,
+      "total_ms": 1.297618
+    },
+    {
+      "case": 46,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081274,
+      "total_ms": 1.307077
+    },
+    {
+      "case": 47,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079243,
+      "total_ms": 1.298382
+    },
+    {
+      "case": 48,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079231,
+      "total_ms": 1.337508
+    },
+    {
+      "case": 49,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.095311,
+      "total_ms": 1.338006
+    },
+    {
+      "case": 50,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.084407,
+      "total_ms": 1.335631
+    },
+    {
+      "case": 51,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.087379,
+      "total_ms": 1.316105
+    },
+    {
+      "case": 52,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.083219,
+      "total_ms": 1.301625
+    },
+    {
+      "case": 53,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079397,
+      "total_ms": 1.300942
+    },
+    {
+      "case": 54,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07989,
+      "total_ms": 1.323151
+    },
+    {
+      "case": 55,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079545,
+      "total_ms": 1.301299
+    },
+    {
+      "case": 56,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080579,
+      "total_ms": 1.316634
+    },
+    {
+      "case": 57,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078665,
+      "total_ms": 1.298775
+    },
+    {
+      "case": 58,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078714,
+      "total_ms": 1.297089
+    },
+    {
+      "case": 59,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.149594,
+      "total_ms": 1.381452
+    },
+    {
+      "case": 60,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081988,
+      "total_ms": 1.306966
+    },
+    {
+      "case": 61,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081096,
+      "total_ms": 1.304677
+    },
+    {
+      "case": 62,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079563,
+      "total_ms": 1.30573
+    },
+    {
+      "case": 63,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080086,
+      "total_ms": 1.370788
+    },
+    {
+      "case": 64,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080874,
+      "total_ms": 1.301557
+    },
+    {
+      "case": 65,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078363,
+      "total_ms": 1.295003
+    },
+    {
+      "case": 66,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.08,
+      "total_ms": 1.313299
+    },
+    {
+      "case": 67,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078381,
+      "total_ms": 1.301717
+    },
+    {
+      "case": 68,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078517,
+      "total_ms": 1.301804
+    },
+    {
+      "case": 69,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079729,
+      "total_ms": 1.297132
+    },
+    {
+      "case": 70,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07941,
+      "total_ms": 1.31584
+    },
+    {
+      "case": 71,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079391,
+      "total_ms": 1.298659
+    },
+    {
+      "case": 72,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078566,
+      "total_ms": 1.302283
+    },
+    {
+      "case": 73,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080942,
+      "total_ms": 1.30456
+    },
+    {
+      "case": 74,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.08051,
+      "total_ms": 1.307046
+    },
+    {
+      "case": 75,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079489,
+      "total_ms": 1.295372
+    },
+    {
+      "case": 76,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080019,
+      "total_ms": 1.307803
+    },
+    {
+      "case": 77,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079754,
+      "total_ms": 1.31112
+    },
+    {
+      "case": 78,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.081164,
+      "total_ms": 1.297791
+    },
+    {
+      "case": 79,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079403,
+      "total_ms": 1.300203
+    },
+    {
+      "case": 80,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080227,
+      "total_ms": 1.302283
+    },
+    {
+      "case": 81,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080092,
+      "total_ms": 1.302228
+    },
+    {
+      "case": 82,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079927,
+      "total_ms": 1.307022
+    },
+    {
+      "case": 83,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079803,
+      "total_ms": 1.299236
+    },
+    {
+      "case": 84,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080437,
+      "total_ms": 1.300462
+    },
+    {
+      "case": 85,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078597,
+      "total_ms": 1.298431
+    },
+    {
+      "case": 86,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07888,
+      "total_ms": 1.30832
+    },
+    {
+      "case": 87,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080006,
+      "total_ms": 1.296517
+    },
+    {
+      "case": 88,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079477,
+      "total_ms": 1.300474
+    },
+    {
+      "case": 89,
+      "expected_prediction": 8,
+      "digit": 8,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079508,
+      "total_ms": 1.295563
+    },
+    {
+      "case": 90,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079471,
+      "total_ms": 1.298357
+    },
+    {
+      "case": 91,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.129833,
+      "total_ms": 1.361335
+    },
+    {
+      "case": 92,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.08101,
+      "total_ms": 1.298597
+    },
+    {
+      "case": 93,
+      "expected_prediction": 1,
+      "digit": 1,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07893,
+      "total_ms": 1.298056
+    },
+    {
+      "case": 94,
+      "expected_prediction": 7,
+      "digit": 7,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078985,
+      "total_ms": 1.297619
+    },
+    {
+      "case": 95,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07827,
+      "total_ms": 1.350221
+    },
+    {
+      "case": 96,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079686,
+      "total_ms": 1.298382
+    },
+    {
+      "case": 97,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079815,
+      "total_ms": 1.300646
+    },
+    {
+      "case": 98,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080296,
+      "total_ms": 1.299016
+    },
+    {
+      "case": 99,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078289,
+      "total_ms": 1.31048
+    },
+    {
+      "case": 100,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079243,
+      "total_ms": 1.31419
+    },
+    {
+      "case": 101,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080393,
+      "total_ms": 1.300596
+    },
+    {
+      "case": 102,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079181,
+      "total_ms": 1.298117
+    },
+    {
+      "case": 103,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079446,
+      "total_ms": 1.299557
+    },
+    {
+      "case": 104,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079932,
+      "total_ms": 1.29947
+    },
+    {
+      "case": 105,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079329,
+      "total_ms": 1.297575
+    },
+    {
+      "case": 106,
+      "expected_prediction": 2,
+      "digit": 2,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079403,
+      "total_ms": 1.301987
+    },
+    {
+      "case": 107,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07912,
+      "total_ms": 1.300892
+    },
+    {
+      "case": 108,
+      "expected_prediction": 6,
+      "digit": 6,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078123,
+      "total_ms": 1.295132
+    },
+    {
+      "case": 109,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079206,
+      "total_ms": 1.314911
+    },
+    {
+      "case": 110,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079914,
+      "total_ms": 1.300191
+    },
+    {
+      "case": 111,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079668,
+      "total_ms": 1.300621
+    },
+    {
+      "case": 112,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079736,
+      "total_ms": 1.299945
+    },
+    {
+      "case": 113,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079514,
+      "total_ms": 1.314874
+    },
+    {
+      "case": 114,
+      "expected_prediction": 4,
+      "digit": 4,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.080136,
+      "total_ms": 1.303582
+    },
+    {
+      "case": 115,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079231,
+      "total_ms": 1.29744
+    },
+    {
+      "case": 116,
+      "expected_prediction": 3,
+      "digit": 3,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.07872,
+      "total_ms": 1.295569
+    },
+    {
+      "case": 117,
+      "expected_prediction": 5,
+      "digit": 5,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079625,
+      "total_ms": 1.304597
+    },
+    {
+      "case": 118,
+      "expected_prediction": 0,
+      "digit": 0,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.078092,
+      "total_ms": 1.329372
+    },
+    {
+      "case": 119,
+      "expected_prediction": 9,
+      "digit": 9,
+      "cycles": 110208,
+      "clock_hz": 100000000,
+      "compute_ms": 1.10208,
+      "upload_ms": 0.079859,
+      "total_ms": 1.299416
+    }
+  ],
+  "benchmark": {
+    "repeats": 50,
+    "mean_cpu_arm_reference_ms": 6.382997160005743,
+    "mean_fpga_call_on_arm_ms": 1.9959499600076924,
+    "mean_fpga_compute_ms": 1.10208,
+    "mean_driver_total_ms": 1.31345112,
+    "speedup_cpu_arm_over_fpga_call": 3.1979745423984194,
+    "baseline": "NumPy integer reference on ARM, same pixels and weights; not an optimized CPU implementation"
+  },
+  "labeled_samples_count": 0,
+  "labeled_samples": [],
+  "labeled_samples_accuracy_percent": null
+}

@@ -1,0 +1,24 @@
+{
+  "functional_status": "PASS",
+  "original_testbench_pass": 10,
+  "rtl_reference_cases_pass": 120,
+  "layer_values_checked": 24240,
+  "mac_operand_pairs_checked": 13102080,
+  "inference_cycles": 110006,
+  "hypothetical_latency_ms_at_100mhz": 1.10006,
+  "synthesis_completed": true,
+  "lut_count": 1082,
+  "register_count": 894,
+  "bram_tiles": 34.5,
+  "dsp_count": 0,
+  "estimated_timing_100mhz_status": "FAIL",
+  "wns_ns": -2.614,
+  "tns_ns": -47.992,
+  "setup_failing_endpoints": 26,
+  "board_measurement_performed": false,
+  "remaining_work": [
+    "Resolve clock/timing during integration before bitstream",
+    "Address BRAM control asynchronous reset DRC",
+    "Create AXI IP and Zynq PS block design"
+  ]
+}

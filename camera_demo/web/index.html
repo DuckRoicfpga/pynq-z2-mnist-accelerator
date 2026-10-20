@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nhận diện chữ số · Camera demo</title>
+  <style>
+    :root { color-scheme: light; --ink:#152a35; --muted:#607782; --teal:#087e76; --line:#dce5e8; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#f3f6f5; font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { max-width:1160px; margin:auto; padding:32px 26px 24px; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { font-weight:750; letter-spacing:.04em; font-size:12px; color:var(--teal); }
+    .badge { font-size:12px; background:#fff0d3; color:#835409; border:1px solid #efd69e; padding:7px 12px; border-radius:20px; }
+    h1 { font-size:clamp(25px,3.1vw,37px); line-height:1.25; letter-spacing:-.025em; margin:24px 0 9px; }
+    .intro { color:var(--muted); margin:0 0 25px; }
+    .layout { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr); gap:20px; }
+    .card { border:1px solid var(--line); background:white; border-radius:18px; overflow:hidden; }
+    .card-head { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; font-weight:650; }
+    .dot { color:var(--muted); font-size:12px; font-weight:500; }
+    .viewport { position:relative; background:#10252b; aspect-ratio:4/3; overflow:hidden; }
+    .viewport video { width:100%; height:100%; object-fit:contain; display:block; }
+    .guide { position:absolute; border:2px solid #89e4c9; border-radius:10px; box-shadow:0 0 0 2000px #061b2460; display:none; pointer-events:none; }
+    .guide span { position:absolute; top:-31px; width:100%; text-align:center; white-space:nowrap; color:#d5fff1; font-size:12px; }
+    .placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:13px; color:#abc2c7; text-align:center; padding:28px; }
+    .camera-icon { font-size:40px; opacity:.8; }
+    .placeholder strong { color:#eef9f7; font-size:17px; }
+    .toolbar { padding:17px 20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    button,select { font:inherit; border-radius:9px; padding:9px 14px; border:1px solid var(--line); background:white; color:var(--ink); }
+    button { cursor:pointer; font-weight:600; }
+    button.primary { background:var(--teal); border-color:var(--teal); color:white; }
+    button:hover:not(:disabled) { filter:brightness(.95); }
+    button:disabled { opacity:.45; cursor:default; }
+    button:focus-visible,select:focus-visible { outline:3px solid #87d8c4; outline-offset:2px; }
+    .options { padding:0 20px 18px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; color:var(--muted); font-size:13px; }
+    .options select { font-size:13px; padding:7px 9px; max-width:100%; }
+    .right { padding:22px; }
+    .eyebrow { font-size:11px; letter-spacing:.09em; font-weight:700; color:var(--muted); }
+    .prediction { display:flex; align-items:center; gap:24px; margin:12px 0; }
+    .digit { font-size:106px; font-weight:700; line-height:1.1; letter-spacing:-.04em; min-width:75px; color:var(--teal); }
+    .prediction-text strong { display:block; font-size:16px; margin-bottom:4px; }
+    .small { font-size:12px; color:var(--muted); }
+    .preview { display:flex; align-items:center; gap:17px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px 0; margin:19px 0; }
+    #pixels { width:100px; height:100px; background:#071619; border-radius:9px; image-rendering:pixelated; }
+    .preview strong { display:block; font-size:13px; }
+    .metrics { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .metric { padding:12px; border-radius:10px; background:#f3f7f6; }
+    .metric b { display:block; font-size:20px; font-weight:650; margin-top:4px; }
+    .metric span { font-size:11px; color:var(--muted); }
+    .notice { margin:17px 0 0; font-size:12px; color:var(--muted); }
+    .samples { margin-top:20px; padding:18px 20px; display:flex; gap:15px; flex-wrap:wrap; align-items:center; }
+    .samples strong { font-size:13px; }
+    .samples .small { flex:1; min-width:200px; }
+    .save { padding:16px 20px; margin-top:15px; display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+    .save label { color:var(--muted); font-size:13px; }
+    #message { margin:16px 0 0; min-height:23px; color:var(--muted); font-size:13px; }
+    #message.error { color:#ae3c27; }
+    .footer { color:var(--muted); font-size:12px; margin-top:16px; }
+    @media(max-width:780px) { main{padding:20px 16px;} .layout{grid-template-columns:1fr;} .top{align-items:flex-start;} .badge{max-width:210px;text-align:center;} .digit{font-size:80px;} }
+  </style>
+</head>
+<body>
+<main>
+  <div class="top"><div class="brand">MNIST / CAMERA DEMO</div><div class="badge" id="backend">Đang kết nối…</div></div>
+  <h1>Đưa một chữ số trước camera.</h1>
+  <p class="intro">Viết một số 0–9 bằng nét đậm trên giấy sáng. Giữ toàn bộ chữ số trong khung và xem kết quả cập nhật.</p>
+  <div class="layout">
+    <section class="card" aria-label="Camera">
+      <div class="card-head">Hình ảnh trực tiếp <span class="dot" id="camera-status">Camera đang tắt</span></div>
+      <div class="viewport" id="viewport">
+        <video id="video" autoplay playsinline muted></video>
+        <div class="guide" id="guide"><span>Một chữ số trong khung</span></div>
+        <div class="placeholder" id="placeholder"><div class="camera-icon">◎</div><strong>Sẵn sàng khi em bật camera</strong><div>Trình duyệt sẽ hỏi quyền truy cập camera.<br>Hình ảnh không bị lật gương.</div></div>
+      </div>
+      <div class="toolbar"><button class="primary" id="start" disabled>Bật camera</button><button id="stop" disabled>Dừng</button><button id="upload" disabled>Thử ảnh từ máy</button><input type="file" id="file" accept="image/png,image/jpeg" hidden></div>
+      <div class="options"><label for="polarity">Màu nét</label><select id="polarity"><option value="dark">Nét đen · nền sáng</option><option value="light">Nét sáng · nền đen</option></select><label for="interval">Nhịp lấy ảnh</label><select id="interval"><option value="100" selected>Mỗi 100 ms (Mượt)</option><option value="60">Mỗi 60 ms (Cực nhanh)</option><option value="200">Mỗi 200 ms</option><option value="400">Mỗi 400 ms</option></select></div>
+    </section>
+    <section class="card right" aria-label="Kết quả nhận diện">
+      <div class="eyebrow">CHỮ SỐ DỰ ĐOÁN</div>
+      <div class="prediction"><div class="digit" id="digit">—</div><div class="prediction-text"><strong id="state">Chưa có ảnh</strong><div class="small" id="detail">Bật camera hoặc thử ảnh mẫu.</div></div></div>
+      <div class="preview"><canvas id="pixels" width="28" height="28"></canvas><div><strong>Ảnh đưa vào mô hình</strong><div class="small">28 × 28 pixel<br>Nét sáng trên nền đen</div></div></div>
+      <div class="metrics"><div class="metric"><span id="time-label">Thời gian suy luận</span><b id="inference">—</b></div><div class="metric"><span>Xử lý ảnh → nhận kết quả</span><b id="latency">—</b></div><div class="metric"><span>Nhịp nhận diện thực tế</span><b id="rate">—</b></div><div class="metric"><span>Ổn định kết quả</span><b id="stability">—</b></div></div>
+      <p class="notice" id="mode-note">Đang đọc cấu hình.</p>
+    </section>
+  </div>
+  <section class="card samples"><strong>Kiểm tra bằng ảnh MNIST</strong><select id="sample-index" aria-label="Chữ số mẫu"></select><button id="sample" disabled>Thử ảnh mẫu</button><div class="small">Dùng để kiểm tra luồng xử lý trước khi thử chữ viết trên giấy.</div></section>
+  <section class="card save"><label for="label">Số thật trên giấy</label><select id="label" aria-label="Nhãn thật"></select><button id="save" disabled>Ghi mẫu kiểm thử</button><span class="small">Chỉ lưu ảnh 28 × 28 khi em bấm; dùng để đối chiếu sau.</span></section>
+  <p id="message" role="status" aria-live="polite">Đang kết nối tới chương trình nhận diện…</p>
+  <div class="footer">Mô hình hiện nhận một chữ số riêng lẻ. Khung trống được bỏ qua; ảnh giấy cần kiểm chứng thực tế.</div>
+</main>
+<script src="/demo.js"></script>
+</body>
+</html>

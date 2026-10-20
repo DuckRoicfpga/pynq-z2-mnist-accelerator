@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "mnist_test_images": 10000,
+  "float32_accuracy_percent": 97.56,
+  "quantized_weight_float_arithmetic_accuracy_percent": 97.58,
+  "integer_accuracy_percent": 97.64,
+  "shift1": 12,
+  "shift2": 8,
+  "max_relu_accumulators": [
+    581736,
+    39008
+  ],
+  "conservative_accumulator_abs_bounds": [
+    3785743,
+    774702,
+    601633
+  ],
+  "rtl_case_count": 120,
+  "hashes": {
+    "fc1_weight.mem": "fc268eec4ad6abfb465b272e128c847ef410e41d1989630bbba9afc25871fcf1",
+    "fc1_bias.mem": "52b3b6f19bb672f225285868a83b336c6762306626b79d98b0f2aa7749c23ea9",
+    "fc2_weight.mem": "2684bf61e09e517361ee2ed26ec65710cf219daa84a35e5cbb623b13cd5724eb",
+    "fc2_bias.mem": "f09ebc3f5cea69d1c326ff44d46f7a4173a8e64c0a022abebf27d319a06deca9",
+    "fc3_weight.mem": "1db217a806331f32b9485e636afc3da818ec1fd2e5248680160fe205812a1a61",
+    "fc3_bias.mem": "6c9aab9f86b355cabe10d88aba767f15782ed4bace83a22999adf11a0bc627de"
+  },
+  "calibration_note": "Existing export selects shifts on the test set; accuracy is not from an untouched holdout."
+}

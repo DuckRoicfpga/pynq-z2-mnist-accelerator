@@ -1,0 +1,22 @@
+{
+  "architecture": [
+    784,
+    128,
+    64,
+    10
+  ],
+  "shifts": [
+    12,
+    8
+  ],
+  "sha256": {
+    "fc1_bias.mem": "52b3b6f19bb672f225285868a83b336c6762306626b79d98b0f2aa7749c23ea9",
+    "fc1_weight.mem": "fc268eec4ad6abfb465b272e128c847ef410e41d1989630bbba9afc25871fcf1",
+    "fc2_bias.mem": "f09ebc3f5cea69d1c326ff44d46f7a4173a8e64c0a022abebf27d319a06deca9",
+    "fc2_weight.mem": "2684bf61e09e517361ee2ed26ec65710cf219daa84a35e5cbb623b13cd5724eb",
+    "fc3_bias.mem": "6c9aab9f86b355cabe10d88aba767f15782ed4bace83a22999adf11a0bc627de",
+    "fc3_weight.mem": "1db217a806331f32b9485e636afc3da818ec1fd2e5248680160fe205812a1a61"
+  },
+  "bit_sha256": "14221bc1f9058fa74f2aa0b759549ed37d880f361502d90341e9186110936bd6",
+  "hwh_sha256": "fcc848b071dfa54c63faed1f6b3ecfba0593f637ffef8d7d16a081bb93a0d71b"
+}

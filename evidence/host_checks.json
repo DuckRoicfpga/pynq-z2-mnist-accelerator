@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checked_local_date": "2026-10-20",
+  "python": "3.12",
+  "platform": "Windows",
+  "camera_and_board_contract_tests": 17,
+  "mock_driver_tests": 6,
+  "total_host_tests": 23,
+  "layer_reference_cases": 120,
+  "layer_reference_values": 24240,
+  "checks": [
+    "AST parsing",
+    "model and RTL SHA256",
+    "recorded board fingerprint and 120 cycle/prediction rows",
+    "camera preprocessing",
+    "HTTP API",
+    "mock remote errors/no fallback",
+    "mock MMIO driver"
+  ],
+  "physical_board_test_run": false,
+  "vivado_build_run": false,
+  "ci_configured_python_versions": [
+    "3.10",
+    "3.12"
+  ],
+  "ci_executed_during_packaging": false,
+  "notes": "Existing tests first exposed two preprocessing failures; publication copy fixes border rejection and contrast dependence on discarded speckles. No test assertions were weakened."
+}

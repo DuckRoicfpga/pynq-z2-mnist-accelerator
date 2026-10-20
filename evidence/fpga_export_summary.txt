@@ -1,0 +1,26 @@
+FPGA EXPORT SUMMARY
+==================================================
+
+Model: MLP 784 -> 128 -> 64 -> 10
+SHIFT1: 12
+SHIFT2: 8
+Integer accuracy: 97.64%
+
+Weight scales:
+  s_w1 = 0.00580986
+  s_w2 = 0.00584451
+  s_w3 = 0.00552462
+
+Bias ranges (INT32 pre-scaled):
+  b1: [-7553, 9186]
+  b2: [-386, 399]
+  b3: [-227, 150]
+
+Memory requirements:
+  W1: 100,352 x 8-bit = 98.0 KB
+  W2: 8,192 x 8-bit = 8.0 KB
+  W3: 640 x 8-bit = 1 KB
+  B1: 128 x 32-bit = 0.5 KB
+  B2: 64 x 32-bit = 0.2 KB
+  B3: 10 x 32-bit = 0.0 KB
+  TOTAL: ~107.4 KB

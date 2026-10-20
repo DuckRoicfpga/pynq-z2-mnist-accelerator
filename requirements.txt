@@ -1,0 +1,3 @@
+# Inference, preprocessing and host tests; PYNQ comes from the board image.
+numpy>=1.24,<3
+Pillow>=9.5,<13

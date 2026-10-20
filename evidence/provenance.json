@@ -1,0 +1,45 @@
+{
+  "status": "CONSISTENCY_CHECK_PASS",
+  "publication_date_local": "2026-10-20",
+  "timezone": "Asia/Saigon",
+  "recorded_board_report_sha256": "2bcf6622ccbf221c22b0526a246c78f48b4f5ab620cfd69d1a5521b2663f2062",
+  "model_fingerprint": "0035b06c2c4fd36966645b9080907a4d3bee77e206b2ca49033ab94f1b658971",
+  "model_and_overlay_hashes_match": true,
+  "all_120_recorded_predictions_and_counters_match": true,
+  "physical_board_retested_for_publication": false,
+  "timestamp_note": "Recorded board timestamp is 2025-05-03, while the paired bitstream header says 2026-10-16. Absolute acquisition time is not established; do not use the board timestamp as the test date.",
+  "reported_benchmark": {
+    "repeats": 50,
+    "mean_cpu_arm_reference_ms": 6.382997160005743,
+    "mean_fpga_call_on_arm_ms": 1.9959499600076924,
+    "mean_fpga_compute_ms": 1.10208,
+    "mean_driver_total_ms": 1.31345112,
+    "speedup_cpu_arm_over_fpga_call": 3.1979745423984194,
+    "baseline": "NumPy integer reference on ARM, same pixels and weights; not an optimized CPU implementation"
+  },
+  "labeled_camera_samples": 0,
+  "runtime_sha256": {
+    "camera_demo/app.py": "c0de3fd0543505aabb46e25f7a3d97ed582159e3cf00fb2013d0328bf2861267",
+    "camera_demo/inference.py": "540f5a1d5cb41b144cf7ec3840459f2ad269dafdd1a339de4bbe8db1530885f5",
+    "camera_demo/preprocess.py": "c135c9b3c5cd87ba1350864717892382fb863600eaca599a01d0e077b4cc3fe3",
+    "camera_demo/verify_board.py": "459f00d50b0d1abea71bb86b76c0ce367cd2c6c42aff96c4b0b87ad0aee1315c",
+    "camera_demo/fpga/board_smoke_test.py": "35703f20411f785b555f987e4ab71d5f56d58a0aa7ea788fceb629537c00a328",
+    "camera_demo/fpga/mnist_driver.py": "a7153840ccea5d0b58d43d6b4ed3d8b3de1d4bc04b4c837158aeb0b170972109"
+  },
+  "original_driver_sha256": "a7153840ccea5d0b58d43d6b4ed3d8b3de1d4bc04b4c837158aeb0b170972109",
+  "public_runtime_sha256": {
+    "camera_demo/app.py": "c0de3fd0543505aabb46e25f7a3d97ed582159e3cf00fb2013d0328bf2861267",
+    "camera_demo/inference.py": "540f5a1d5cb41b144cf7ec3840459f2ad269dafdd1a339de4bbe8db1530885f5",
+    "camera_demo/preprocess.py": "1b73dfd932392ae2f1fcf57f3aa9246c6b7f50fc2198fe6bc37b4dd819cbfeec",
+    "camera_demo/verify_board.py": "459f00d50b0d1abea71bb86b76c0ce367cd2c6c42aff96c4b0b87ad0aee1315c",
+    "camera_demo/fpga/board_smoke_test.py": "35703f20411f785b555f987e4ab71d5f56d58a0aa7ea788fceb629537c00a328",
+    "camera_demo/fpga/mnist_driver.py": "a7153840ccea5d0b58d43d6b4ed3d8b3de1d4bc04b4c837158aeb0b170972109"
+  },
+  "publication_runtime_changes": [
+    {
+      "file": "camera_demo/preprocess.py",
+      "scope": "Reject selected strokes touching ROI border; use selected-component contrast peak instead of discarded noise. Existing host assertions retained. No new physical camera/board evaluation."
+    }
+  ],
+  "checkpoint_sha256": "2f658607173cdc71280b43d811ea2f1d9238e160ba945207d745e18754e97e60"
+}

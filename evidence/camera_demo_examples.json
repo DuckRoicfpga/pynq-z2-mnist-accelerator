@@ -1,0 +1,27 @@
+{
+  "source": "Two images supplied by the author in this conversation for public documentation",
+  "added_to_documentation_local_date": "2026-10-20",
+  "capture_date_independently_confirmed": false,
+  "interface_indicates": "FPGA inference",
+  "examples": [
+    {
+      "file": "docs/images/camera-digit-4.png",
+      "expected_digit_reported_by_author": 4,
+      "displayed_prediction": 4,
+      "sha256": "5f23edc5af3d40f5734cd766403dbb98b5d4e1c16259564bf9b9174c96fa0316",
+      "bytes": 783464,
+      "description": "Handwritten digit 4 on paper; pictured prediction 4.",
+      "image_edits_applied": false
+    },
+    {
+      "file": "docs/images/camera-digit-8-faint-strokes.png",
+      "expected_digit_reported_by_author": 8,
+      "displayed_prediction": 8,
+      "sha256": "c0a0a0d39e15423f102a913e27b188b1a8080d30f8f8670c342d0ee423bf05b3",
+      "bytes": 567935,
+      "description": "Author deliberately added faint strokes to test recognition of digit 8; pictured prediction 8. Intentional test condition, not an example selected for poor handwriting.",
+      "image_edits_applied": false
+    }
+  ],
+  "scope": "Qualitative camera demonstration examples. No new board run or dataset-level accuracy evaluation. Existing board verification report is unchanged."
+}
