@@ -1,0 +1,4 @@
+-r requirements.txt
+torch>=2.2,<3
+torchvision>=0.17,<1
+matplotlib>=3.7,<4
